@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    
+    <title>Learn Your Damn Homophones</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <%= stylesheet_link_tag "lydh" %>
+  </head>
+  
+  <body>
+    <div id="container">
+      
+    	<div id="content">
+    		<div id="header">
+    			<h1>I&rsquo;m tired of this shit.</h1>
+    			<p>It&rsquo;s about time that everyone learned their damn homophones.  If you slept your way through the fourth grade or just skipped all of the grammar lectures because you were too busy sucking off that dude in the locker room, then maybe this table will help clear up some of the fucking confusion.</p>
+    		</div>
+        
+    		<div id="main">
+          <%= yield %>
+      	</div>
+          
+    	</div>
+      	
+      <div id="footer">
+    		<div id="footercontent">
+    			<p>You think this is obscene?  Do you even <a href="http://xkcd.com/481/">read</a> any of the stupid shit you write?  <em>That&rsquo;s</em> obscene.</p>
+    			<p>Frustrated with a commonly fucked up homophone?  <a href="http://twitter.com/?status=%40homophone%20Please%20add%20this%20to%20the%20list%3A">Suggest it</a> on Twitter or open a <a href="https://github.com/lleger/lydh">pull request</a>.</p>
+    			<p>Produced by <a href="http://twitter.com/lleger">Logan Leger</a>. Enjoyed this site or found it useful? <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=34CUUHQ2UZG3A&lc=US&item_name=LYDH&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted">Donate</a> to help fund my server bill.</p>
+    		</div>
+    	</div>
+      
+    </div>
+    
+    <%= partial 'analytics' unless environment == :development %>
+  </body>
+</html>

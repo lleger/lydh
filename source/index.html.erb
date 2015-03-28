@@ -1,0 +1,32 @@
+<h2>Commonly fucked up homophones.</h2>
+
+<table cellspacing="0">
+	<tr>
+		<th>These</th>
+		<th>&hellip;are not</th>
+		<th>&hellip;the fucking same.</th>
+	</tr>
+  <% data.table.homophones.each do |homophone| %>
+  <tr>
+    <% homophone.words.each_with_index do |word, index| %>
+    <td>
+      <%= partial :word_cell, locals: { word: word.word, explanation: word.explanation } %>
+      <% if index == 2 && homophone.hint %>
+        <%= partial :hint, locals: { hint: homophone.hint.text } %>
+      <% end %>
+    </td>
+    <% end %>
+    <% if homophone.words.count < 3 %>
+      <% if homophone.hint %>
+        <td>
+          <%= partial :hint, locals: { hint: homophone.hint.text } %>
+        </td>
+      <% else %>
+        <td>&nbsp;</td>
+      <% end %>
+    <% end %>
+  </tr>
+  <% end %>
+</table>
+
+<h2>Please, learn your damn homophones.</h2>
